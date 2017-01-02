@@ -21,7 +21,7 @@ class GroupsController < ApplicationController
   end
 
   def show
-    find_group_and_check_permission
+    @group = Group.find(params[:id])
   end
 
   def edit
