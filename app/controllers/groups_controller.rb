@@ -32,7 +32,8 @@ class GroupsController < ApplicationController
   def update
 
     if @group.update(group_params)
-      redirect_to groups_path, notice: "Update Success"
+      redirect_to groups_path
+      flash[:notice] = "Update Success"
     else
       render :edit
     end
