@@ -5,24 +5,23 @@ class Account::PostsController < ApplicationController
     @posts = current_user.posts
   end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
+  #def edit
+  #  @group = @groups.find(params[:group_id])
+  #  @post = Post.find(params[:id])
+  #end
 
-  def update
-    @post = Post.find(params[:id])
-    @post.update(post_params)
-  end
-  
-  def update
-    @post.update(post_params)
-  end
+  #def update
+  #  @group = Group.find(params[:group_id])
+  #  @post = Post.find(params[:id])
+  #  @post.update(post_params)
+  #end
 
-  def destroy
-    @post = Post.find(params[:id])
-    @post.destory
-    redirect_to account_posts_path
-  end
+
+  #def destroy
+  #  @post = Post.find(params[:id])
+  #  @post.destory
+  #  redirect_to account_posts_path
+  #end
 end
 
 private

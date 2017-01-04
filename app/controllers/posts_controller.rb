@@ -23,13 +23,13 @@ class PostsController < ApplicationController
 
   def edit
     @group = Group.find(params[:group_id])
-    @post = Post.find(params[:id])
+    @post = @group.posts.find(params[:id])
 
   end
 
   def update
     @group = Group.find(params[:group_id])
-    @post = Post.find(params[:id])
+    @post = @group.posts.find(params[:id])
     if @post.update(post_params)
       redirect_to group_path(@group)
     else
